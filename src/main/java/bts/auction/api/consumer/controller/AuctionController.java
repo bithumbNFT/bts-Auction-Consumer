@@ -21,7 +21,7 @@ public class AuctionController {
 
     @ApiOperation(value = "모든 NFT의 경매 매수 참여 정보 조회")
     @GetMapping("auction/{nftid}")
-    public Flux<Auction> consumedMessage(@PathVariable String nftid) {
+    public Mono<Auction> consumedMessage(@PathVariable String nftid) {
 
         return auctionService.findByNftId(nftid);
     }

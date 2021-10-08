@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface AuctionService {
     Flux<Auction> findAll();
-    Flux<Auction> findByNftId(String nftid);
+    Mono<Auction> findByNftId(String nftid);
 
 }

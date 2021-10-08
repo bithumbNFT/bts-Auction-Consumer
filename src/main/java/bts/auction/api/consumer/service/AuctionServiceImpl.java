@@ -22,8 +22,9 @@ public class AuctionServiceImpl implements AuctionService {
     }
 
     @Override
-    public Flux<Auction> findByNftId(String nftid) {
-        Flux<Auction> autionFlux = auctionRepository.findByNftId(nftid);
+    public Mono<Auction> findByNftId(String nftid) {
+        List<String> names = new ArrayList<>();
+        Mono<Auction> autionFlux = auctionRepository.findByNftId(nftid).last();
         return autionFlux;
     }
 }
