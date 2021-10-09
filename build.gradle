@@ -33,6 +33,10 @@ dependencies {
 	implementation 'org.springframework.integration:spring-integration-core:5.5.3'
 	implementation 'org.springframework.integration:spring-integration-kafka:5.5.3'
 
+	//loging
+	implementation 'net.logstash.logback:logstash-logback-encoder:5.1'
+	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin', version: '2.2.3.RELEASE'
+
 	testImplementation 'org.springframework.kafka:spring-kafka-test'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
